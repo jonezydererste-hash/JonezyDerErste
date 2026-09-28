@@ -1,0 +1,1085 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JonezyDerErste | Official</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 900px;
+    height: 900px;
+    background: #d90000;
+    filter: blur(260px);
+    opacity: 0.08;
+    top: -400px;
+    left: -350px;
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 800px;
+    height: 800px;
+    background: #ff0000;
+    filter: blur(250px);
+    opacity: 0.06;
+    bottom: -400px;
+    right: -300px;
+    z-index: -2;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(5,5,5,0.82);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,0,0,0.2);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ff0000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff0000;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 150px 20px 100px;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1100px;
+}
+
+.small-title {
+    color: #ff0000;
+    letter-spacing: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 11vw, 150px);
+    font-weight: 1000;
+    line-height: 0.85;
+    text-transform: uppercase;
+
+    text-shadow: 0 0 40px rgba(255,0,0,0.15);
+}
+
+.hero h1 span {
+    color: #ff0000;
+}
+
+.hero-description {
+    max-width: 750px;
+    margin: 40px auto 0;
+
+    color: #999;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 17px 35px;
+
+    border-radius: 7px;
+
+    border: 1px solid #ff0000;
+
+    background: #100000;
+
+    color: white;
+    text-decoration: none;
+
+    font-weight: 900;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #ff0000;
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 40px rgba(255,0,0,0.25);
+}
+
+.button.main {
+    background: #e00000;
+}
+
+/* =========================================
+   GENERAL
+========================================= */
+
+section {
+    padding: 130px 8%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-header h2 {
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.section-header h2 span {
+    color: #ff0000;
+}
+
+.section-header p {
+    color: #777;
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.about-text h3 span {
+    color: #ff0000;
+}
+
+.about-text p {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.about-box {
+    border-left: 3px solid #ff0000;
+    padding-left: 25px;
+}
+
+.about-box strong {
+    color: white;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+
+    max-width: 1100px;
+    margin: 80px auto 0;
+}
+
+.stat {
+    padding: 35px;
+
+    background: linear-gradient(145deg,#111,#080808);
+
+    border: 1px solid #222;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 40px;
+    color: #ff0000;
+}
+
+.stat p {
+    color: #777;
+    margin-top: 8px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.content-card {
+    min-height: 280px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(145deg,#131313,#070707);
+
+    border: 1px solid #222;
+
+    border-radius: 15px;
+
+    transition: 0.35s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.content-card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #ff0000;
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #ff0000;
+
+    box-shadow: 0 20px 60px rgba(255,0,0,0.12);
+}
+
+.content-icon {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.content-card h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.content-card p {
+    color: #888;
+    line-height: 1.7;
+}
+
+/* =========================================
+   GAMES
+========================================= */
+
+.games {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 25px;
+}
+
+.game {
+    padding: 40px;
+
+    background: #0b0b0b;
+
+    border: 1px solid #222;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.game:hover {
+    border-color: #ff0000;
+    transform: scale(1.02);
+}
+
+.game h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.game h3 span {
+    color: #ff0000;
+}
+
+.game p {
+    color: #888;
+    line-height: 1.7;
+}
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.social-section {
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(100,0,0,0.08),
+        transparent
+    );
+}
+
+.socials {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.social {
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: #0b0b0b;
+
+    border: 1px solid #222;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.social:hover {
+    transform: translateY(-10px);
+    border-color: #ff0000;
+
+    box-shadow: 0 20px 50px rgba(255,0,0,0.12);
+}
+
+.social .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.social h3 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.social p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.social a {
+    display: inline-block;
+
+    background: #e00000;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #ff0000;
+}
+
+/* =========================================
+   COMMUNITY
+========================================= */
+
+.community {
+    max-width: 950px;
+    margin: auto;
+
+    text-align: center;
+}
+
+.community h2 {
+    font-size: 55px;
+}
+
+.community h2 span {
+    color: #ff0000;
+}
+
+.community p {
+    margin-top: 25px;
+
+    color: #888;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    margin: 50px auto 0;
+
+    max-width: 1100px;
+
+    padding: 70px 30px;
+
+    text-align: center;
+
+    border: 1px solid #300000;
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(150,0,0,0.18),
+            #090909 70%
+        );
+}
+
+.cta h2 {
+    font-size: 45px;
+}
+
+.cta h2 span {
+    color: #ff0000;
+}
+
+.cta p {
+    color: #888;
+    margin: 20px auto 30px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    border-top: 1px solid #1c1c1c;
+
+    color: #555;
+}
+
+footer strong {
+    color: #ff0000;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.footer-links a:hover {
+    color: #ff0000;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width: 850px) {
+
+    nav {
+        padding: 0 20px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    section {
+        padding: 90px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .games {
+        grid-template-columns: 1fr;
+    }
+
+    .socials {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 40px;
+    }
+
+    .community h2 {
+        font-size: 40px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        Jonezy<span>DerErste</span>
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#socials">Socials</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            OFFICIAL WEBSITE • JONEZYDERERSTE
+        </div>
+
+        <h1>
+            JONEZY<span>DERERSTE</span>
+        </h1>
+
+        <p class="hero-description">
+            Willkommen auf der offiziellen Website von JonezyDerErste.
+            Gaming, Challenges, Livestreams und Entertainment –
+            alles an einem Ort.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="button main"
+               href="https://www.youtube.com/@JonezyDerErste"
+               target="_blank">
+                ▶ YouTube ansehen
+            </a>
+
+            <a class="button"
+               href="#socials">
+                Meine Socials
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="section-header">
+
+        <h2>
+            Über <span>Jonezy</span>
+        </h2>
+
+        <p>
+            Wer steckt eigentlich hinter JonezyDerErste?
+        </p>
+
+    </div>
+
+
+    <div class="about-container">
+
+        <div class="about-text">
+
+            <h3>
+                Gaming ist mehr als nur ein <span>Spiel.</span>
+            </h3>
+
+            <p>
+                JonezyDerErste ist ein Gaming-Creator mit dem Ziel,
+                unterhaltsame Videos, spannende Challenges und
+                besondere Gaming-Momente mit seiner Community zu teilen.
+            </p>
+
+            <p>
+                Egal ob spannende Matches, verrückte Challenges,
+                Livestreams oder kurze Clips – hier dreht sich alles
+                um Gaming und Entertainment.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <p>
+                <strong>Creator:</strong><br>
+                JonezyDerErste
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Content:</strong><br>
+                Gaming • Challenges • Livestreams
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Community:</strong><br>
+                Gemeinsam zocken und Spaß haben
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>🎮</h3>
+            <p>Gaming Creator</p>
+        </div>
+
+        <div class="stat">
+            <h3>🔴</h3>
+            <p>Live &amp; Videos</p>
+        </div>
+
+        <div class="stat">
+            <h3>⚡</h3>
+            <p>Challenges &amp; Action</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTENT ================= -->
+
+<section id="content">
+
+    <div class="section-header">
+
+        <h2>
+            Mein <span>Content</span>
+        </h2>
+
+        <p>
+            Was dich auf den verschiedenen Plattformen erwartet.
+        </p>
+
+    </div>
+
+
+    <div class="content-grid">
+
+        <div class="content-card">
+
+            <div class="content-icon">🎮</div>
+
+            <h3>Gaming</h3>
+
+            <p>
+                Spannende Matches, Gameplay, Highlights und
+                besondere Gaming-Momente.
+            </p>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="content-icon">🔥</div>
+
+            <h3>Challenges</h3>
+
+            <p>
+                Verrückte Regeln, schwierige Aufgaben und
+                Challenges, die jedes Spiel verändern können.
+            </p>
+
+        </div>
+
+
+        <div class="content-card">
+
+            <div class="content-icon">📺</div>
+
+            <h3>Livestreams</h3>
+
+            <p>
+                Gemeinsam mit der Community zocken,
+                reden und spannende Momente erleben.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GAMES ================= -->
+
+<section id="games">
+
+    <div class="section-header">
+
+        <h2>
+            Meine <span>Games</span>
+        </h2>
+
+        <p>
+            Einige der Games, die zum Content gehören können.
+        </p>
+
+    </div>
+
+
+    <div class="games">
+
+        <div class="game">
+
+            <h3>
+                Rocket <span>League</span>
+            </h3>
+
+            <p>
+                Competitive Matches, Ranked, Challenges,
+                Freestyle und jede Menge schnelle Action.
+            </p>
+
+        </div>
+
+
+        <div class="game">
+
+            <h3>
+                <span>Roblox</span>
+            </h3>
+
+            <p>
+                Unterschiedliche Games, verrückte Erlebnisse,
+                Challenges und spannende Community-Momente.
+            </p>
+
+        </div>
+
+
+        <div class="game">
+
+            <h3>
+                Weitere <span>Games</span>
+            </h3>
+
+            <p>
+                Der Content kann sich jederzeit verändern.
+                Neue Games und neue Ideen gehören dazu.
+            </p>
+
+        </div>
+
+
+        <div class="game">
+
+            <h3>
+                Community <span>Games</span>
+            </h3>
+
+            <p>
+                Spiele und Challenges, bei denen die Community
+                direkt mitmachen und Einfluss nehmen kann.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOCIALS ================= -->
+
+<section class="social-section" id="socials">
+
+    <div class="section-header">
+
+        <h2>
+            Meine <span>Socials</span>
+        </h2>
+
+        <p>
+            Folge JonezyDerErste auf allen Plattformen.
+        </p>
+
+    </div>
+
+
+    <div class="socials">
+
+
+        <!-- YOUTUBE -->
+
+        <div class="social">
+
+            <div class="icon">▶️</div>
+
+            <h3>YouTube</h3>
+
+            <p>
+                Videos, Gaming und neue Challenges.
+            </p>
+
+            <a href="https://www.youtube.com/@JonezyDerErste"
+               target="_blank">
+                YouTube öffnen
+            </a>
+
+        </div>
+
+
+        <!-- TIKTOK -->
+
+        <div class="social">
+
+            <div class="icon">♪</div>
+
+            <h3>TikTok</h3>
+
+            <p>
+                Kurze Clips, Highlights und mehr.
+            </p>
+
+            <a href="https://www.tiktok.com/@jonezydererste.official"
+               target="_blank">
+                TikTok öffnen
+            </a>
+
+        </div>
+
+
+        <!-- TWITCH -->
+
+        <div class="social">
+
+            <div class="icon">🔴</div>
+
+            <h3>Twitch</h3>
+
+            <p>
+                Livestreams und Gaming mit der Community.
+            </p>
+
+            <a href="https://www.twitch.tv/jonezydererste"
+               target="_blank">
+                Twitch öffnen
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= COMMUNITY ================= -->
+
+<section>
+
+    <div class="community">
+
+        <h2>
+            Werde Teil der <span>Community</span>
+        </h2>
+
+        <p>
+            Du willst keine neuen Videos, Streams und Clips verpassen?
+            Dann folge JonezyDerErste auf den Social-Media-Plattformen
+            und sei bei den nächsten Gaming-Momenten dabei.
+        </p>
+
+    </div>
+
+
+    <div class="cta">
+
+        <h2>
+            Bereit für <span>mehr?</span>
+        </h2>
+
+        <p>
+            Schau auf dem YouTube-Kanal vorbei und entdecke
+            den neuesten Content.
+        </p>
+
+        <a class="button main"
+           href="https://www.youtube.com/@JonezyDerErste"
+           target="_blank">
+            Zum YouTube-Kanal
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">Über mich</a>
+        <a href="#content">Content</a>
+        <a href="#games">Games</a>
+        <a href="#socials">Socials</a>
+
+    </div>
+
+    © 2026 <strong>JonezyDerErste</strong> · Official Website
+
+</footer>
+
+
+</body>
+</html>
+```
